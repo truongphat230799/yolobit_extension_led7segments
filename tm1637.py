@@ -155,7 +155,7 @@ class TM1637(object):
         elif num > 99:
             self.show('hi') # high
         else:
-            string = '{0: >2f}'.format(num)
+            string = '{0: >2d}'.format(num)
             self.write(self.encode_string(string))
         self.write([_SEGMENTS[38], _SEGMENTS[12]], 2) # degrees C
 
